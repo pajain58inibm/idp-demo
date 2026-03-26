@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: idp-demo
-        image: <your-dockerhub-username>/idp-demo:latest
+        image: pajain58inibm/idp-demo:latest
         ports:
         - containerPort: 5000
