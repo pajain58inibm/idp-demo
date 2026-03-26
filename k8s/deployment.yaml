@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: idp-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: idp-demo
+  template:
+    metadata:
+      labels:
+        app: idp-demo
+    spec:
+      containers:
+      - name: idp-demo
+        image: <your-dockerhub-username>/idp-demo:latest
+        ports:
+        - containerPort: 5000
